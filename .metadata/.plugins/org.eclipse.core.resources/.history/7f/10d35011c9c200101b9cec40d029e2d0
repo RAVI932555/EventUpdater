@@ -1,0 +1,13 @@
+package com.eventUpdater.service;
+
+import com.eventUpdater.sEntity.Event;
+
+public class EventServiceImpl implements IEventService {
+
+	@Override
+	public Event addEvent(Event event) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

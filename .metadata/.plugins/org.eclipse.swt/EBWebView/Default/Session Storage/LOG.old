@@ -1,2 +1,3 @@
-2025/11/14-08:23:49.148 3a8c Creating DB D:\EventUpdater\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Session Storage since it was missing.
-2025/11/14-08:23:49.157 3a8c Reusing MANIFEST D:\EventUpdater\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Session Storage/MANIFEST-000001
+2025/11/16-14:53:57.223 4364 Reusing MANIFEST D:\EventUpdater\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Session Storage/MANIFEST-000001
+2025/11/16-14:53:57.225 4364 Recovering log #3
+2025/11/16-14:53:57.226 4364 Reusing old log D:\EventUpdater\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Session Storage/000003.log 

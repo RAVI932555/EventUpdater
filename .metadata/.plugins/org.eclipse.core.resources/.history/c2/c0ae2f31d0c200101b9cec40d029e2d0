@@ -1,0 +1,64 @@
+package com.eventUpdater.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.eventUpdater.sEntity.Application;
+import com.eventUpdater.sEntity.Event;
+import com.eventUpdater.sEntity.Student;
+import com.eventYpdater.repository.ApplicationRepository;
+import com.eventYpdater.repository.EventRepository;
+import com.eventYpdater.repository.StudentRepository;
+
+public class ApplicationServiceImp implements IApplicationService {
+
+	@Autowired
+	private ApplicationRepository applicationRepository;
+	@Autowired
+	private StudentRepository studentRepository;
+	@Autowired
+	private EventRepository eventRepository;
+	@Override
+	public String addApplication(Application application) {
+		Student student=studentRepository.findById(application.getStudent().getId()).orElse(null);
+		Event event=eventRepository.findById(application.getEvent().getId()).orElse(null);
+		
+		if(student==null || event==null) {
+			return "Student or Event not found";
+		}
+		String eligible=event.getEligibility_criteria();
+		if(eligible!=null && !eligible.isEmpty()) {
+			String[] rules=eligible.split(";");
+			for(String rule:rules) {
+			 String[] keyValue=rule.split(":");
+				String key=keyValue[0].trim();
+				String value=keyValue[1].trim();
+				
+				if(!key.equalsIgnoreCase("college") && !student.getCollegeName().equalsIgnoreCase(value)) {
+					return "Not eligible: college mismatch";
+				}
+				if(!key.equalsIgnoreCase("education") && !student.getEduation().equalsIgnoreCase(value)) {
+					return "Not eligible: education mismatch";
+				}
+				if(!key.equalsIgnoreCase("interest") && !student.getInterests().equalsIgnoreCase(value)) {
+					 return "Not eligible: interest mismatch";
+				}
+			}
+			
+		}
+		application.setEvent(event);
+		application.setStudent(student);
+		application.setStatus("applied");
+		applicationRepository.save(application);
+		return "Application submitted successfully";
+		
+	}
+
+	@Override
+	public List<Application> getApplication() {
+		
+		return applicationRepository.findAll();
+	}
+
+}

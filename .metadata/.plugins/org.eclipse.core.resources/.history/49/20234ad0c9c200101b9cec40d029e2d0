@@ -1,0 +1,11 @@
+package com.eventUpdater.service;
+
+import java.util.List;
+
+import com.eventUpdater.sEntity.Application;
+
+public interface IApplicationSerive {
+
+	public Application addApplication(Application application);
+	public List<Application> getApplication();
+}

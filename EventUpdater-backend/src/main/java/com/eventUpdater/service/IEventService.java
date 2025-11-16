@@ -1,0 +1,10 @@
+package com.eventUpdater.service;
+
+import java.util.List;
+
+import com.eventUpdater.sEntity.Event;
+
+public interface IEventService {
+ public Event addEvent(Event event);
+ public List<Event> getAllEvent();
+}

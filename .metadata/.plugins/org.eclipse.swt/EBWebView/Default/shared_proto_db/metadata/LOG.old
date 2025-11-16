@@ -1,2 +1,3 @@
-2025/11/14-08:22:33.996 3100 Creating DB D:\EventUpdater\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\shared_proto_db\metadata since it was missing.
-2025/11/14-08:22:34.001 3100 Reusing MANIFEST D:\EventUpdater\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\shared_proto_db\metadata/MANIFEST-000001
+2025/11/16-14:53:07.769 10a8 Reusing MANIFEST D:\EventUpdater\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\shared_proto_db\metadata/MANIFEST-000001
+2025/11/16-14:53:07.770 10a8 Recovering log #3
+2025/11/16-14:53:07.770 10a8 Reusing old log D:\EventUpdater\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\shared_proto_db\metadata/000003.log 

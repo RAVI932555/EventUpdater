@@ -1,0 +1,7 @@
+package com.eventUpdater.service;
+
+import com.eventUpdater.sEntity.Student;
+
+public interface StudentServce {
+	public Student addStudent(Student student);
+}

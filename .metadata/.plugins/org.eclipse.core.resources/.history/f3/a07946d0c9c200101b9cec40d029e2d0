@@ -1,0 +1,21 @@
+package com.eventUpdater.service;
+
+import java.util.List;
+
+import com.eventUpdater.sEntity.Application;
+
+public class ApplicationServiceImp implements IApplicationSerive {
+
+	@Override
+	public Application addApplication(Application application) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Application> getApplication() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
